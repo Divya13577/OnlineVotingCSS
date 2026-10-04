@@ -1,0 +1,6 @@
+﻿CREATE TABLE Votes
+(
+    VoteID INT IDENTITY(1,1) PRIMARY KEY,
+    VoterID INT NOT NULL,
+    CandidateID INT NOT NULL
+);

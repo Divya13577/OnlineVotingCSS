@@ -1,0 +1,750 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* ================================
+   FULL SCREEN BACKGROUND
+   ================================ */
+
+.home-page {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* ================================
+   DARK OVERLAY
+   ================================ */
+
+.overlay {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: linear-gradient( 135deg, rgba(10, 30, 70, 0.78), rgba(0, 0, 0, 0.45) );
+}
+
+/* ================================
+   MAIN CARD
+   ================================ */
+
+.voting-card {
+    width: 460px;
+    max-width: 100%;
+    padding: 42px 45px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(8px);
+}
+
+/* ================================
+   ICON
+   ================================ */
+
+.vote-icon {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 18px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    background: #e0ecff;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+}
+
+/* ================================
+   HEADING
+   ================================ */
+
+.voting-card h1 {
+    font-size: 31px;
+    color: #14213d;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* ================================
+   TAGLINE
+   ================================ */
+
+.tagline {
+    font-size: 17px;
+    font-weight: 600;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+/* ================================
+   DESCRIPTION
+   ================================ */
+
+.description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #5b6472;
+    margin-bottom: 28px;
+}
+
+/* ================================
+   BUTTON SECTION
+   ================================ */
+
+.button-section {
+    width: 100%;
+}
+
+/* Common button */
+
+.btn {
+    width: 100%;
+    height: 50px;
+    margin: 7px 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Voter Login */
+
+.voter-login {
+    background: #2563eb;
+    color: white;
+}
+
+    .voter-login:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+    }
+
+/* Registration */
+
+.voter-registration {
+    background: #16a34a;
+    color: white;
+}
+
+    .voter-registration:hover {
+        background: #15803d;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(22, 163, 74, 0.35);
+    }
+
+/* Admin */
+
+.admin-login {
+    background: #334155;
+    color: white;
+}
+
+    .admin-login:hover {
+        background: #1e293b;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(30, 41, 59, 0.35);
+    }
+
+/* ================================
+   FOOTER TEXT
+   ================================ */
+
+.footer-text {
+    margin-top: 24px;
+    font-size: 12px;
+    color: #7b8492;
+    letter-spacing: 1px;
+}
+
+/* ================================
+   LAPTOP / DESKTOP
+   ================================ */
+
+@media (min-width: 768px) {
+
+    .voting-card {
+        transform: translateY(-5px);
+    }
+}
+
+/* ================================
+   SMALL SCREEN
+   ================================ */
+
+@media (max-width: 600px) {
+
+    .overlay {
+        padding: 20px;
+    }
+
+    .voting-card {
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+
+        .voting-card h1 {
+            font-size: 26px;
+        }
+
+    .tagline {
+        font-size: 15px;
+    }
+}
+/* =================================
+   VOTER REGISTRATION PAGE
+   ================================= */
+
+.registration-page {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1589391886645-d51941baf7fb?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.registration-overlay {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(8, 25, 55, 0.72);
+}
+
+.registration-card {
+    width: 470px;
+    max-width: 100%;
+    padding: 38px 42px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    text-align: left;
+}
+
+.register-icon {
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    background: #e0ecff;
+    border-radius: 50%;
+}
+
+.registration-card h1 {
+    text-align: center;
+    font-size: 28px;
+    color: #14213d;
+    margin-bottom: 6px;
+}
+
+.register-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.input-group {
+    margin-bottom: 17px;
+}
+
+    .input-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+    }
+
+.input-box {
+    width: 100%;
+    height: 44px;
+    padding: 10px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.25s;
+}
+
+    .input-box:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+.register-btn {
+    width: 100%;
+    height: 47px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 9px;
+    background: #16a34a;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+    .register-btn:hover {
+        background: #15803d;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(22, 163, 74, 0.3);
+    }
+
+.back-home-btn {
+    width: 100%;
+    height: 43px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 9px;
+    background: #e2e8f0;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+    .back-home-btn:hover {
+        background: #cbd5e1;
+    }
+
+@media (max-width: 600px) {
+
+    .registration-overlay {
+        padding: 20px;
+    }
+
+    .registration-card {
+        padding: 30px 25px;
+    }
+
+        .registration-card h1 {
+            font-size: 24px;
+        }
+}
+/* ================================
+   VOTER LOGIN PAGE
+   ================================ */
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.login-overlay {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(8, 25, 55, 0.72);
+}
+
+.login-card {
+    width: 430px;
+    max-width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    text-align: left;
+}
+
+.login-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    background: #e0ecff;
+    border-radius: 50%;
+}
+
+.login-card h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #14213d;
+    margin-bottom: 8px;
+}
+
+.login-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.input-group {
+    margin-bottom: 18px;
+}
+
+    .input-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+    }
+
+.input-box {
+    width: 100%;
+    height: 45px;
+    padding: 10px 13px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+}
+
+    .input-box:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+.login-btn {
+    width: 100%;
+    height: 48px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+    .login-btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+    }
+
+.back-home-btn {
+    width: 100%;
+    height: 43px;
+    margin-top: 11px;
+    border: none;
+    border-radius: 9px;
+    background: #e2e8f0;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .back-home-btn:hover {
+        background: #cbd5e1;
+    }
+
+.login-footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 12px;
+    color: #7b8492;
+}
+/* ================================
+   VOTING PAGE
+   ================================ */
+
+.voting-page {
+    min-height: 100vh;
+    width: 100%;
+    background-image: url("https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.voting-overlay {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgba(8, 25, 55, 0.72);
+}
+
+.voting-card {
+    width: 450px;
+    max-width: 100%;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 22px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+    text-align: left;
+}
+
+    .voting-card h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #14213d;
+        margin-bottom: 8px;
+    }
+
+.vote-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 15px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 34px;
+    background: #e0ecff;
+    border-radius: 50%;
+}
+
+.voting-subtitle {
+    text-align: center;
+    color: #64748b;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.vote-section {
+    margin-bottom: 20px;
+}
+
+    .vote-section label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #334155;
+    }
+
+.candidate-dropdown {
+    width: 100%;
+    height: 45px;
+    padding: 8px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 14px;
+    background: white;
+    outline: none;
+}
+
+    .candidate-dropdown:focus {
+        border-color: #2563eb;
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+    }
+
+.submit-vote-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+    .submit-vote-btn:hover {
+        background: #1d4ed8;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 18px rgba(37, 99, 235, 0.3);
+    }
+
+.vote-logout-btn {
+    width: 100%;
+    height: 43px;
+    margin-top: 11px;
+    border: none;
+    border-radius: 9px;
+    background: #e2e8f0;
+    color: #334155;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+    .vote-logout-btn:hover {
+        background: #cbd5e1;
+    }
+
+.voting-footer {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 12px;
+    color: #7b8492;
+}
+/* ============================= */
+/* ADMIN LOGIN INPUTS */
+/* ============================= */
+
+.login-section {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+    .login-section label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 14px;
+        color: #333;
+        font-weight: 500;
+    }
+
+.login-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #d5dce5;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+}
+
+    .login-input:focus {
+        border-color: #2563eb;
+    }
+
+/* ============================= */
+/* ADMIN DASHBOARD */
+/* ============================= */
+
+.dashboard-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #eef4ff, #f8fbff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.dashboard-card {
+    width: 850px;
+    max-width: 95%;
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-sizing: border-box;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+    .dashboard-card h1 {
+        text-align: center;
+        margin: 0;
+        color: #172554;
+        font-size: 30px;
+    }
+
+.dashboard-subtitle {
+    text-align: center;
+    color: #64748b;
+    margin: 8px 0 28px;
+}
+
+/* RESULTS TABLE */
+
+.results-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+    .results-table th {
+        background: #2563eb;
+        color: white;
+        padding: 14px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .results-table td {
+        padding: 14px;
+        border-bottom: 1px solid #e5e7eb;
+        color: #334155;
+        font-size: 14px;
+    }
+
+    .results-table tr:nth-child(even) {
+        background: #f8fafc;
+    }
+
+    .results-table tr:hover {
+        background: #eef4ff;
+    }
+
+/* TOTAL VOTES */
+
+.total-votes {
+    margin-top: 25px;
+    padding: 16px;
+    background: #eef4ff;
+    border-radius: 10px;
+    text-align: center;
+    color: #1d4ed8;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* LOGOUT */
+
+.admin-logout-btn {
+    display: block;
+    width: 180px;
+    margin: 25px auto 0;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #e2e8f0;
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .admin-logout-btn:hover {
+        background: #cbd5e1;
+    }
